@@ -1,6 +1,7 @@
 function check() {
   // 表示されているすべてのメモを取得している
   const posts = document.querySelectorAll(".post");
+  console.log(posts)
   posts.forEach(function (post) {
      if (post.getAttribute("data-load") != null) {
       return null;
@@ -38,5 +39,7 @@ function check() {
       };
     });
   });
+  const popo = posts.firstElementChild;
+  console.log(popo)
 }
 setInterval(check, 1000);
